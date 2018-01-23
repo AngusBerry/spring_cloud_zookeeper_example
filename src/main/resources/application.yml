@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: spring-cloud-zookeeper-example
+
+logging:
+  level:
+    org.apache.zookeeper.ClientCnxn: WARN
