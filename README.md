@@ -14,9 +14,9 @@ Start the app WITHOUT passing a traditional Environment ID env. vars., that Spri
 
 e.g. no need for -DEnvironmentID={local or dev or int, etc}
 
-Start the Spring Boot app with embedded server, in your favorite IDE like IntelliJ  
-...or build it and run it:  
-
+Start the Spring Boot app (with embedded server), in your favorite IDE like IntelliJ    
+...or run it with:  
+mvn spring-boot:run
 
 
 Test the service via GET (using a browser):
