@@ -1,0 +1,5 @@
+dbURL: jdbc:mysql://10.10.10.1:3309/
+dbUser: ymlDevDBUserValue
+dbPassword: ymlDevDBpassword
+other:
+  nestedproperty: ymlDevNestedPropertyValue
