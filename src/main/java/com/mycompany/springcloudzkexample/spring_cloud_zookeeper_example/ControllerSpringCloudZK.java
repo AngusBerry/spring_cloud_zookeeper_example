@@ -14,11 +14,6 @@ import java.net.UnknownHostException;
 @RequestMapping("/api")
 public class ControllerSpringCloudZK {
 
-    //local values directly from application.yml
-    @Value("${spring.cloud.zookeeper.connect-string}")
-    private String springCloudZookeeperConnectString;
-
-
     //Zookeeper config values defined in application.yml
     @Value("${dbURL}")
     private String dbURL;
@@ -30,7 +25,7 @@ public class ControllerSpringCloudZK {
     private String dbPassword;
 
     @Value("${other.nestedproperty}")
-    private String otherNestedProperty;
+    private String otherNestedvalue;
 
 
     @RequestMapping(method = RequestMethod.GET, value = "/showpropertyvalues", produces = "text/plain")
@@ -45,11 +40,11 @@ public class ControllerSpringCloudZK {
 
 
         return "This app is running on " + hostname  + ".\r\n" +
-                "The configuration values are applied from Zookeeper running on " + springCloudZookeeperConnectString + "... \r\n\r\n" +
+                "The configuration values are applied from local YAML property files... \r\n\r\n" +
                 "dbURLproperty = " + dbURL + "\r\n" +
                 "dbUser = " + dbUser + "\r\n" +
                 "dbPassword = " + dbPassword + "\r\n" +
-                "other.nestedproperty = " + otherNestedProperty;
+                "other.nestedvalue = " + otherNestedvalue;
     }
 
 }

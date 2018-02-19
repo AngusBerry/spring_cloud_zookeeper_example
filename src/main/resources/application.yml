@@ -1,6 +1,8 @@
 spring:
   application:
     name: spring-cloud-zookeeper-example
+  profiles:
+    active: dev
 
 logging:
   level:
