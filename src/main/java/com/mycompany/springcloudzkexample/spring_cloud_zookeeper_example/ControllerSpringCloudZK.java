@@ -29,8 +29,11 @@ public class ControllerSpringCloudZK {
     @Value("${dbPassword}")
     private String dbPassword;
 
+    @Value("${other.nestedproperty}")
+    private String otherNestedProperty;
 
-    @RequestMapping(method = RequestMethod.GET, value = "/showzkvalues", produces = "text/plain")
+
+    @RequestMapping(method = RequestMethod.GET, value = "/showpropertyvalues", produces = "text/plain")
     public String myresponse() throws UnknownHostException {
         String hostname = null;
         try {
@@ -43,9 +46,10 @@ public class ControllerSpringCloudZK {
 
         return "This app is running on " + hostname  + ".\r\n" +
                 "The configuration values are applied from Zookeeper running on " + springCloudZookeeperConnectString + "... \r\n\r\n" +
-                "zkdbURLproperty = " + dbURL + "\r\n" +
-                "zkdbUser = " + dbUser + "\r\n" +
-                "zkdbPassword = " + dbPassword;
+                "dbURLproperty = " + dbURL + "\r\n" +
+                "dbUser = " + dbUser + "\r\n" +
+                "dbPassword = " + dbPassword + "\r\n" +
+                "other.nestedproperty = " + otherNestedProperty;
     }
 
 }
